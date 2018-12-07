@@ -10,7 +10,7 @@ export default class HomeScreen extends React.Component {
   }
 
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       // codebar: '3228881015433' 
       // codebar: '3760091720153' 
@@ -21,7 +21,17 @@ export default class HomeScreen extends React.Component {
   }
 
   fetchProduct() {
-    console.log(this.state.codebar)
+    let url = "https://fr.openfoodfacts.org/api/v0/product/" + this.state.codebar +".json"
+    fetch(url, {
+      method: "GET",
+      headers: {
+        'Accept': 'application/json',
+      }
+    })
+    .then((response) => response.json())
+    .then((responseData) => {
+      console.log(responseData)
+    })
   }
 
   render() {
