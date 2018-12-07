@@ -12,5 +12,9 @@ export const styles = StyleSheet.create({
     logo: {
         height: (831 / 1200) * (dim.width * 0.8),
         width: dim.width * 0.8
+    },
+    label: {
+        fontSize: 24,
+        color: Colors.darkBlue
     }
 });
