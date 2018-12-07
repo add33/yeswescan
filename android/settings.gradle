@@ -1,0 +1,3 @@
+rootProject.name = 'yeswescan'
+
+include ':app'
