@@ -25,28 +25,6 @@ cd yeswescan
 npm install
 ```
 
-### Mise a jours du projet
-1 - Ouvrire votre invite de commande et aller dans votre dossier de travail !
-```sh
-cd mon/dossier/de/travail
-```
-
-2 - Allez dans le dossier du projet
-```sh
-cd yeswescan
-```
-
-3 - Télécharger les mise a jour
-```sh
-git fet
-```
-
-4 - Installez les nouvelles les dépendances
-```sh
-npm install
-```
-
-
 ### Utilisation 
 Android :  
 Ouvrire le projet dans android studio et Run APP (Attention ouvrire le dossier android) 
