@@ -11,7 +11,7 @@ let options = {
   defaultNavigationOptions: {
     initialRouteName: 'Home',
     headerStyle: {
-      backgroundColor: Colors.darkBlue
+      backgroundColor: Colors.blue
     }
   }
 }

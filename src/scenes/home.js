@@ -1,12 +1,13 @@
 import React from 'react';
 import { Text, View, Image, TextInput, Button } from 'react-native';
 
+import { Header } from '../components/header';
 import { styles } from '../styles/main.css';
 
 export default class HomeScreen extends React.Component {
 
   static navigationOptions = {
-    headerTitle: "Home",
+    headerTitle: <Header title="Yes we Scan" />,
   }
 
   constructor(props) {
