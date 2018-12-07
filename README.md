@@ -5,7 +5,10 @@
 
 
 ### Installation
-1 - Ouvrire votre invite de commande
+1 - Ouvrire votre invite de commande et aller dans votre dossier de travail !
+```sh
+cd mon/dossier/de/travail
+```
 
 2 - Télécharger le projet
 ```sh
@@ -23,9 +26,12 @@ npm install
 ```
 
 ### Mise a jours du projet
-1 - Ouvrire votre invite de commande
+1 - Ouvrire votre invite de commande et aller dans votre dossier de travail !
+```sh
+cd mon/dossier/de/travail
+```
 
-2 - Allez dans le dossier télécharger
+2 - Allez dans le dossier du projet
 ```sh
 cd yeswescan
 ```
