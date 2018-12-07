@@ -16,8 +16,7 @@ export default class HomeScreen extends React.Component {
       // codebar: '3228881015433' 
       // codebar: '3760091720153' 
       // codebar: '5449000000996' 
-      // codebar: '8000500085455' 
-      codebar: ''
+      codebar: '8000500085455' 
     }
   }
 
@@ -31,7 +30,12 @@ export default class HomeScreen extends React.Component {
     })
     .then((response) => response.json())
     .then((responseData) => {
-      console.log(responseData)
+      console.log(responseData.product)
+      let sendData = {
+        'product': responseData.product,
+        'test': 'test'
+      }
+      this.props.navigation.navigate('Product', sendData)
     })
   }
 

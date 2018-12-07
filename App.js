@@ -2,9 +2,11 @@ import { createStackNavigator, createAppContainer } from "react-navigation"
 import { Colors } from './src/styles/colors'
 
 import HomeScreen from './src/scenes/home'
+import ProductScreen from './src/scenes/product'
 
 let screens = {
-  Home: { screen: HomeScreen }
+  Home: { screen: HomeScreen },
+  Product: { screen: ProductScreen }
 }
 
 let options = {
