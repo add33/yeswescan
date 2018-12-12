@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image, FlatList, ScrollView } from 'react-native';
+import { Text, View, Image, FlatList, ScrollView, AsyncStorage } from 'react-native';
 
 import { Header } from '../components/header';
 import { styles } from '../styles/main.css';
@@ -9,6 +9,30 @@ export default class ProductScreen extends React.Component {
 
   static navigationOptions = {
     headerTitle: <Header title="Fiche Produit" />,
+  }
+
+  componentDidMount(){
+
+    let new_product = this.props.navigation.getParam("product")
+
+    // AsyncStorage.removeItem('products')
+    AsyncStorage.getItem( 'products', (err, result) => {
+
+      // let productsStored = (result != null) ? productsStored = JSON.parse(result) : []
+
+      let productsStored 
+      if(result != null){
+        productsStored = JSON.parse(result)
+      }else{
+        productsStored = []
+      }
+
+      productsStored.push(new_product)
+
+      AsyncStorage.setItem( 'products', JSON.stringify(productsStored) )
+      
+      console.log(productsStored)
+    })
   }
 
   render() {
