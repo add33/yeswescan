@@ -16,8 +16,8 @@ export const productStyle = StyleSheet.create({
         color: Colors.blue
     },
     grade: {
-        height:90,
-        width: 140
+        height:120,
+        width: 180
     },
     info: {
         fontSize: 14,
@@ -28,7 +28,7 @@ export const productStyle = StyleSheet.create({
         marginTop: 10,
     },
     imgProduct: {
-        height: dim.width*0.4,
+        height: dim.width*0.5,
         width: dim.width*0.4
     },
     bold: {
@@ -40,5 +40,9 @@ export const productStyle = StyleSheet.create({
     },
     row: {
         flexDirection: 'row'
+    },
+    item: {
+        marginTop: 3,
+        marginLeft: 12
     }
 });

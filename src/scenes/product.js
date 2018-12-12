@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, FlatList, ScrollView } from 'react-native';
 
 import { Header } from '../components/header';
 import { styles } from '../styles/main.css';
@@ -14,6 +14,7 @@ export default class ProductScreen extends React.Component {
   render() {
     let p = this.props.navigation.getParam("product")
     return (
+      <ScrollView>
         <View style={ productStyle.container }>
             <Text style={ productStyle.title }> {p.product_name} </Text>
             <Text style={ productStyle.subTitle }> {p.generic_name_fr} </Text>
@@ -46,7 +47,37 @@ export default class ProductScreen extends React.Component {
               
             </View>
 
+            <Text style={ productStyle.info }> Ingrédients</Text>
+            <FlatList
+              data={ p.ingredients_ids_debug }
+              renderItem={ (row) => <Text style={ productStyle.item }> - { row.item }</Text> }
+              keyExtractor={(item, index) => index.toString()}
+            />
+
+            <Text style={ productStyle.info }> Additifs</Text>
+            <FlatList
+              data={ p.additives_tags }
+              renderItem={ (row) => <Text style={ productStyle.item }> - { row.item }</Text> }
+              keyExtractor={(item, index) => index.toString()}
+            />
+
+
+            <Text style={ productStyle.info }> des trucs</Text>
+            <Text style={ productStyle.info }> autre</Text>
+            <Text style={ productStyle.info }> encore</Text>
+
         </View>
+      </ScrollView>
     )
   }
 }
+
+
+
+
+
+
+
+
+
+
