@@ -3,10 +3,12 @@ import { Colors } from './src/styles/colors'
 
 import HomeScreen from './src/scenes/home'
 import ProductScreen from './src/scenes/product'
+import HistoryScreen from './src/scenes/history'
 
 let screens = {
   Home: { screen: HomeScreen },
-  Product: { screen: ProductScreen }
+  Product: { screen: ProductScreen },
+  History: { screen: HistoryScreen }
 }
 
 let options = {
