@@ -17,21 +17,15 @@ export default class ProductScreen extends React.Component {
 
     // AsyncStorage.removeItem('products')
     AsyncStorage.getItem( 'products', (err, result) => {
-
       // let productsStored = (result != null) ? productsStored = JSON.parse(result) : []
-
       let productsStored 
       if(result != null){
         productsStored = JSON.parse(result)
       }else{
         productsStored = []
       }
-
       productsStored.push(new_product)
-
       AsyncStorage.setItem( 'products', JSON.stringify(productsStored) )
-      
-      console.log(productsStored)
     })
   }
 
