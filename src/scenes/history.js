@@ -30,8 +30,11 @@ export default class HistoryScreen extends React.Component {
   }
 
   onPressProduct(p){
-    console.log('press product', p)
-        this.props.navigation.navigate('Product')
+    let sendData = {
+      'product': p,
+      'save': false
+    }
+    this.props.navigation.navigate('Product', sendData)
   }
 
   renderItem(item){

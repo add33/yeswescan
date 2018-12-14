@@ -14,19 +14,24 @@ export default class ProductScreen extends React.Component {
   componentDidMount(){
 
     let new_product = this.props.navigation.getParam("product")
+    let save = this.props.navigation.getParam("save")
 
-    // AsyncStorage.removeItem('products')
-    AsyncStorage.getItem( 'products', (err, result) => {
-      // let productsStored = (result != null) ? productsStored = JSON.parse(result) : []
-      let productsStored 
-      if(result != null){
-        productsStored = JSON.parse(result)
-      }else{
-        productsStored = []
-      }
-      productsStored.push(new_product)
-      AsyncStorage.setItem( 'products', JSON.stringify(productsStored) )
-    })
+    if ( save != false ){
+      // AsyncStorage.removeItem('products')
+      AsyncStorage.getItem( 'products', (err, result) => {
+        // let productsStored = (result != null) ? productsStored = JSON.parse(result) : []
+        let productsStored 
+        if(result != null){
+          productsStored = JSON.parse(result)
+        }else{
+          productsStored = []
+        }
+        productsStored.push(new_product)
+        AsyncStorage.setItem( 'products', JSON.stringify(productsStored) )
+      })
+
+    }
+
   }
 
   render() {
