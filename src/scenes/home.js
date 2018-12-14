@@ -60,6 +60,14 @@ export default class HomeScreen extends React.Component {
           color="#841584"
           accessibilityLabel="Chercher"
         />
+
+        <Text style={styles.label} > OU </Text>
+        <Button
+          onPress={() => this.props.navigation.navigate('Camera')}
+          title="Scanner"
+          color="#841584"
+          accessibilityLabel="Scanner"
+        />
         <Button
           onPress={() => this.props.navigation.navigate('History') }
           title="Historique"

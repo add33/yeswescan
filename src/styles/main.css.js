@@ -16,5 +16,13 @@ export const styles = StyleSheet.create({
     label: {
         fontSize: 24,
         color: Colors.darkBlue
+    },
+    cameraWrap: {
+        flex: 1,
+        justifyContent: 'flex-end',
+        alignItems: 'stretch'
+    },
+    camera: {
+        flex: 1
     }
 });
