@@ -16,14 +16,30 @@ export const historyStyle = StyleSheet.create({
         width: 120
     },
     imgProduct: {
-        height: dim.width*0.2,
-        width: dim.width*0.2
+        height: 80,
+        width: 80
     },
     row: {
         flexDirection: 'row'
     },
     item: {
-        marginTop: 3,
-        marginLeft: 8
+        height: 80,
+        paddingTop: 3,
+        paddingLeft: 8,
+        backgroundColor: '#fff'
+    },
+    btnSupp: {
+        position: 'absolute',
+        right: 0,
+        height: 80,
+        width: 110,
+        backgroundColor: 'red',
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    btnValue: {
+        fontSize: 16,
+        color: '#fff'
     }
 });
